@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from model import predict_salary
+from app.model import predict_salary
 from pydantic import BaseModel
 
 

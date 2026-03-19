@@ -1,6 +1,6 @@
 import pickle
 from pathlib import Path
-import numpy as np
+import pandas as pd
 
 
 MODEL_PATH = Path(__file__).parent.parent / "model" / "model.pkl"
@@ -10,11 +10,9 @@ with open(MODEL_PATH, "rb") as f:
     
 
 def predict_salary(experience_years: float) -> float:
-    """
-    Predict salary based on years of experince
-    """
+    df = pd.DataFrame({
+        "YearsExperience": [experience_years]
+    })
     
-    prediction = model.predict(np.array([[experience_years]]))
-    
-    print(prediction)
+    prediction = model.predict(df)
     return float(prediction[0])
