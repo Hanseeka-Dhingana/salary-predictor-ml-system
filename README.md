@@ -1,8 +1,8 @@
 # Salary Predictor ML System
 A Machine Learning application to **predict salary based on years of experience** using a trained model. The system features a **FastAPI backend**, optional **Streamlit frontend**, and is **Dockerized for easy deployment**.
 
-
-
+**Project Link :**
+[https://salary-predictor-ml-system.streamlit.app/](https://salary-predictor-ml-system.streamlit.app/)
 ## Project Structure
 ```
 salary-predictor-ml-system/
