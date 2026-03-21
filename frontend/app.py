@@ -1,25 +1,21 @@
 import streamlit as st
 import requests
 
-# =====================
-# Config
-# =====================
-API_URL = "https://your-railway-api-url.up.railway.app/predict" 
 
-# =====================
+# Config
+API_URL = "https://salary-predictor-api-production.up.railway.app/predict"  
+
+
 # App Title
-# =====================
 st.title("Salary Predictor")
 st.write("Predict your salary based on years of experience")
 
-# =====================
+
 # User Input
-# =====================
 experience = st.number_input("Enter your years of experience", min_value=0.0, max_value=50.0, value=1.0, step=0.1)
 
-# =====================
+
 # Predict Button
-# =====================
 if st.button("Predict Salary"):
     payload = {"experience_years": experience}
     
